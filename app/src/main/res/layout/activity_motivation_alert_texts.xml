@@ -48,7 +48,7 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_motivation_text_btn"
         android:layout_width="56dp"
         android:layout_height="56dp"
