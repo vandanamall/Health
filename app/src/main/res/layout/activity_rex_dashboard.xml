@@ -240,6 +240,7 @@
 
 
                     </RelativeLayout>
+
                 </LinearLayout>
 
 
@@ -279,7 +280,44 @@
 
                     </RelativeLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/medicine"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
 
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@drawable/my_gradient_drawable"
+                        android:minHeight="100dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:padding="3dp"
+                            android:src="@drawable/megaphone" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Medicine
+                             \nReminder"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -337,7 +375,7 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:background="@drawable/my_gradient_drawable_"
+                        android:background="@drawable/my_gradient_drawable2"
                         android:minHeight="100dp"
                         android:padding="10dp">
 
@@ -364,7 +402,44 @@
 
                     </RelativeLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/hostrack"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
 
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@drawable/my_gradient_drawable_"
+                        android:minHeight="100dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:padding="3dp"
+                            android:src="@drawable/briefcase" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Nearby
+                             Hospital/\nClinic"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
 
             </LinearLayout>

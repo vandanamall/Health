@@ -7,7 +7,9 @@
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.mainac"></activity>
+        <activity android:name=".hostrack.Hostrack"></activity>
+        <activity android:name=".medicine.Medicine" />
+        <activity android:name=".login.mainac" />
         <activity android:name=".Food" />
         <activity android:name=".login.MainActivity">
             <intent-filter>
@@ -21,7 +23,7 @@
         <activity android:name=".login.VerificationCode" />
         <activity android:name=".login.ResetPasswordActivity" />
         <activity android:name=".login.SignUpActivity" />
-        <activity android:name=".activities.RexDashboardActivity"></activity>
+        <activity android:name=".activities.RexDashboardActivity" />
         <activity
             android:name=".activities.SplashActivity"
             android:theme="@style/SplashTheme" />
@@ -84,8 +86,8 @@
         <activity
             android:name=".hydration.Settings.SettingsActivity"
             android:theme="@style/hydrationtheme" />
-        <activity android:name=".yoga.DashExerciseActivity"></activity>
-        <activity android:name=".yoga.TopSessionsActivity"></activity>
+        <activity android:name=".yoga.DashExerciseActivity" />
+        <activity android:name=".yoga.TopSessionsActivity" />
         <activity android:name=".yoga.PoseActivity" />
         <activity android:name=".yoga.AddPoseActivity" />
         <activity android:name=".yoga.TopPosesActivity" />
@@ -152,6 +154,7 @@
             android:name=".services.AbstractStepDetectorService"
             android:foregroundServiceType="location" />
     </application>
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -166,12 +169,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-
     <uses-permission android:name="android.permission.SEND_SMS" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

@@ -20,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.kiit.health.Prevalent.Prevalent;
 import com.example.kiit.health.R;
+import com.example.kiit.health.hostrack.Hostrack;
+import com.example.kiit.health.medicine.Medicine;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -29,14 +31,15 @@ public class RexDashboardActivity extends AppCompatActivity {
         RelativeLayout card,dcard;
         TextView titletv, desctv,name,weight,bmi;
         String height;
-        LinearLayout profileconnect,stepcount,hydrate,food,yoga;
+        LinearLayout profileconnect,stepcount,hydrate,food,yoga,medicine,hostrack;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_rex_dashboard);
 
             name=findViewById(R.id.named);
-
+            medicine=findViewById(R.id.medicine);
+            hostrack=findViewById(R.id.hostrack);
             bmi=findViewById(R.id.bmi1);
             weight=findViewById(R.id.weightd);
             card = findViewById(R.id.card);
@@ -85,7 +88,14 @@ public class RexDashboardActivity extends AppCompatActivity {
                 Intent i=new Intent(RexDashboardActivity.this,  SplashActivity.class);
                 startActivity(i);
             });
-
+            medicine.setOnClickListener(v -> {
+                Intent i=new Intent(RexDashboardActivity.this, Medicine.class);
+                startActivity(i);
+            });
+            hostrack.setOnClickListener(v -> {
+                Intent i=new Intent(RexDashboardActivity.this, Hostrack.class);
+                startActivity(i);
+            });
             profileconnect.setOnClickListener(v -> {
                 Intent i=new Intent(RexDashboardActivity.this,ProfileActivity.class);
                 startActivity(i);
