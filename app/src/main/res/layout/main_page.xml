@@ -2,21 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/circularsolid"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@drawable/circularsolid"
     xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
-        android:id="@+id/card"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/circularsolid"
-        android:orientation="vertical"
-        android:transitionName="card">
 
         <LinearLayout
             android:background="@drawable/circularsolid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_marginTop="62dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -33,7 +27,7 @@ android:background="@drawable/circularsolid"
                 android:text="Daily Hydration Progress"
                 android:textSize="25sp"
                 android:padding="15dp"
-                    android:textColor="#59408F"
+                    android:textColor="#1E90FF"
                 android:tint ="@color/colorPrimaryace"
                 android:onClick="onClick3"/>
 
@@ -50,7 +44,7 @@ android:background="@drawable/circularsolid"
             android:id="@+id/donut_progress"
             android:layout_width="220dp"
             android:layout_height="210dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="80dp"
             android:layout_gravity="center"
             custom:donut_finished_color="#87CEFA"
             custom:donut_unfinished_stroke_width="5dp"
@@ -70,7 +64,7 @@ android:background="@drawable/circularsolid"
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:id="@+id/add_drink_button"
             android:text="add a drink"
             android:layout_marginLeft="30dp"
@@ -80,18 +74,17 @@ android:background="@drawable/circularsolid"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:onClick="onClick3"
-            android:background="@drawable/buttondark"/>
-
+            android:background="@drawable/my_gradient_drawable3"/>
 
     </LinearLayout>
 
 </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="60dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:background="#483D8B">
+            android:background="#1E90FF">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +99,7 @@ android:background="@drawable/circularsolid"
                     android:onClick="onClick2"
                     android:src = "@drawable/history_icon"
                     android:tint="@color/white"
-                    android:background="#483D8B"
+                    android:background="#1E90FF"
                     />
 
                 <ImageButton
@@ -118,11 +111,12 @@ android:background="@drawable/circularsolid"
                     android:layout_gravity="center"
                     android:layout_marginLeft="90dp"
                     android:onClick="onClick"
-                    android:background="#483D8B"
+                    android:background="#1E90FF"
                     />
 
             </LinearLayout>
 
         </RelativeLayout>
-</RelativeLayout>
+
+
 </RelativeLayout>

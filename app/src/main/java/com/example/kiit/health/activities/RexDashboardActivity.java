@@ -5,26 +5,19 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Pair;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.kiit.health.Prevalent.Prevalent;
 import com.example.kiit.health.R;
 import com.example.kiit.health.hostrack.Hostrack;
-import com.example.kiit.health.medicine.Medicine;
-import com.squareup.picasso.Picasso;
-
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.example.kiit.health.medicine.MainActivity;
 
 public class RexDashboardActivity extends AppCompatActivity {
     double b;
@@ -89,7 +82,7 @@ public class RexDashboardActivity extends AppCompatActivity {
                 startActivity(i);
             });
             medicine.setOnClickListener(v -> {
-                Intent i=new Intent(RexDashboardActivity.this, Medicine.class);
+                Intent i=new Intent(RexDashboardActivity.this, MainActivity.class);
                 startActivity(i);
             });
             hostrack.setOnClickListener(v -> {

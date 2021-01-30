@@ -5,7 +5,6 @@
     <!-- Menu Items-->
     <string name="action_help">Ayuda</string>
     <string name="action_about">Sobre la aplicación</string>
-    <string name="action_settings">Ajustes</string>
     <string name="action_main">Podómetro</string>
     <string name="action_training">Entrenamiento</string>
 

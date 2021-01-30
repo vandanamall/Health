@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.2"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -11,8 +11,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.kiit.health"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -52,7 +52,6 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.browser:browser:1.3.0'
@@ -66,4 +65,16 @@ dependencies {
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
 
     implementation 'io.paperdb:paperdb:2.6'
+
+
+
+    implementation 'com.getbase:floatingactionbutton:1.9.0'
+    implementation 'com.wdullaer:materialdatetimepicker:1.2.1'
+    implementation 'com.bignerdranch.android:recyclerview-multiselect:0.2'
+    implementation 'com.wrapp.floatlabelededittext:library:0.0.6'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    implementation 'com.android.volley:volley:1.1.0'
 }

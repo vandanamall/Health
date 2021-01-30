@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kiit.health">
 
     <application
@@ -8,7 +9,6 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity android:name=".hostrack.Hostrack"></activity>
-        <activity android:name=".medicine.Medicine" />
         <activity android:name=".login.mainac" />
         <activity android:name=".Food" />
         <activity android:name=".login.MainActivity">
@@ -99,14 +99,12 @@
         <receiver android:name=".hydration.Notifications.NotificationReciever" />
         <receiver
             android:name=".hydration.BroadcastReceivers.DateLogBroadcastReceiver"
-            android:theme="@style/hydrationtheme" />
+          />
         <receiver
-            android:name=".hydration.BroadcastReceivers.StopNotificationBroadcastReceiver"
-            android:theme="@style/hydrationtheme" />
+            android:name=".hydration.BroadcastReceivers.StopNotificationBroadcastReceiver"/>
         <receiver
             android:name=".hydration.BroadcastReceivers.BootBroadcastReceiver"
-            android:enabled="true"
-            android:theme="@style/hydrationtheme">
+            android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -142,8 +140,7 @@
         <service
             android:name=".hydration.Widget.UpdateWidgetService"
             android:enabled="true"
-            android:exported="true"
-            android:theme="@style/hydrationtheme" />
+            android:exported="true" />
         <service android:name=".services.HardwareStepCounterService" />
         <service android:name=".services.MovementSpeedService" />
         <service android:name=".services.AccelerometerStepDetectorService" />
@@ -153,6 +150,32 @@
         <service
             android:name=".services.AbstractStepDetectorService"
             android:foregroundServiceType="location" />
+
+        <activity android:name=".medicine.MainActivity">
+
+        </activity>
+        <activity android:name=".medicine.AddReminderActivity"
+            android:label="@string/title_activity_add_reminder"
+            android:parentActivityName=".medicine.MainActivity"
+            android:theme="@style/AppTheme">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".medicine.MainActivity"
+                />
+        </activity>
+        <provider
+            android:name=".medicine.data.AlarmReminderProvider"
+            android:authorities="com.example.kiit.health.medicine"
+            android:exported="false" />
+
+        <service
+            android:name=".medicine.reminder.ReminderAlarmService"
+            android:exported="false" />
+
+
+
+
     </application>
 
     <supports-screens
@@ -162,6 +185,8 @@
         android:resizeable="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
+
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -174,5 +199,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 </manifest>

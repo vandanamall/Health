@@ -6,7 +6,6 @@
     <!-- Menu Items-->
     <string name="action_help">Aide</string>
     <string name="action_about">À Propos</string>
-    <string name="action_settings">Préférences</string>
     <string name="action_main">Podomètre</string>
     <string name="action_training">Entraînement</string>
 

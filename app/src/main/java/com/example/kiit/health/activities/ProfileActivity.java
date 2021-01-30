@@ -29,7 +29,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.squareup.picasso.Picasso;
-import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.HashMap;
 
@@ -85,27 +84,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE ) {
-            if (resultCode == RESULT_OK) {
-                if (data != null) {
-                    {
-                        CropImage.ActivityResult result = CropImage.getActivityResult(data);
-                        ImageUri = result.getUri();
-                        //profileImageView.setImageURI(ImageUri);
-                    }
-                }
-            }
-        }
-        else
-        {
-            Toast.makeText(this,"Error,Try Again",Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(ProfileActivity.this,ProfileActivity.class));
-            finish();
-        }
-    }
+
 
     private void updateOnlyUserInfo() {
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child("Users");
