@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,11 +18,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.kiit.health.Prevalent.Prevalent;
 import com.example.kiit.health.R;
 import com.example.kiit.health.hostrack.Hostrack;
+import com.example.kiit.health.login.LoginActivity;
 import com.example.kiit.health.medicine.MainActivity;
+import com.google.firebase.auth.FirebaseAuth;
+
+import io.paperdb.Paper;
 
 public class RexDashboardActivity extends AppCompatActivity {
     double b;
-        RelativeLayout card,dcard;
+    private ImageView signout;
+    RelativeLayout card,dcard;
         TextView titletv, desctv,name,weight,bmi;
         String height;
         LinearLayout profileconnect,stepcount,hydrate,food,yoga,medicine,hostrack;
@@ -29,6 +35,19 @@ public class RexDashboardActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_rex_dashboard);
+
+            signout=findViewById(R.id.signout);
+            signout.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Paper.book().destroy();
+                    Intent intent = new Intent(RexDashboardActivity.this, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+            });
 
             name=findViewById(R.id.named);
             medicine=findViewById(R.id.medicine);
@@ -111,6 +130,7 @@ public class RexDashboardActivity extends AppCompatActivity {
 
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
+
     @Override
     public void onBackPressed() {
 
