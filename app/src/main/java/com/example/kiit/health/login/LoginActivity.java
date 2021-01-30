@@ -151,8 +151,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (exit) {
-            Intent intent = new Intent(LoginActivity.this, mainac.class);
-            startActivity(intent);
+            finishAffinity();
         } else {
             Toast.makeText(LoginActivity.this, "Press back again to return", Toast.LENGTH_SHORT).show();
             exit = true;
