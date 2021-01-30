@@ -110,5 +110,19 @@ public class mainac extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        if (exit) {
+           finishAffinity();
+        } else {
+            Toast.makeText(mainac.this, "Press back again to return", Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 2000);
+        }
+    }
 }
